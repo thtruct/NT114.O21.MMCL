@@ -1,0 +1,319 @@
+{
+  "app": "app",
+  "agreement": "Agreement",
+  "job": "job",
+  "user": "user",
+  "list": "list",
+  "edit": "edit",
+  "shop": "shop",
+  "blog": "blog",
+  "post": "post",
+  "mail": "mail",
+  "chat": "chat",
+  "file": "file",
+  "tour": "tour",
+  "cards": "cards",
+  "blank": "blank",
+  "order": "order",
+  "lists": "lists",
+  "create": "create",
+  "company_details": "Company details",
+  "cvl-dashboard": "CVL Auction Dashboard",
+  "kanban": "kanban",
+  "general": "general",
+  "banking": "banking",
+  "booking": "booking",
+  "profile": "profile",
+  "account": "account",
+  "product": "product",
+  "invoice": "invoice",
+  "details": "details",
+  "checkout": "checkout",
+  "calendar": "calendar",
+  "overview": "overview",
+  "analytics": "analytics",
+  "ecommerce": "e-commerce",
+  "management": "management",
+  "menu_level": "menu level",
+  "item_label": "item label",
+  "description": "description",
+  "other_cases": "other cases",
+  "item_caption": "item caption",
+  "file_manager": "File Manager",
+  "menu_level_1a": "menu level 1a",
+  "menu_level_1b": "menu level 1b",
+  "menu_level_2a": "menu level 2a",
+  "menu_level_2b": "menu level 2b",
+  "menu_level_3a": "menu level 3a",
+  "menu_level_3b": "menu level 4b",
+  "item_disabled": "item disabled",
+  "item_by_roles": "item by roles",
+  "item_external_link": "item external link",
+  "only_admin_can_see_this_item": "Only admin can see this item",
+  "upgrade_to_pro": "Upgrade to Pro",
+  "demo": {
+    "title": "English"
+  },
+  "common": {
+    "ask_your_question": "Ask your question",
+    "faqs": "FAQ's",
+    "back": "Back",
+    "save_next": "Save - next",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "or": "or",
+    "save": "Save",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "gender": "Gender",
+    "birthday": "Birthday",
+    "p_number": "P-nummer",
+    "next": "Next",
+    "status": "Status",
+    "selection": "Selection"
+  },
+  "pages": {
+    "welcome": {
+      "welcome": "Welcome",
+      "about_us_our_products": "About us and our products",
+      "introduction_video": "Please find an introduction video about Transvision, DEXTR and our products. we are always looking for new transportation companies to work with us and service the customers that use our mobility services to travel wherever they need to go.",
+      "company_name": "Company Name",
+      "p_number": "P-number"
+    },
+    "onboarding": {
+      "title": "Onboarding"
+    },
+    "company_details": {
+      "company_details": "Company details",
+      "little_more_company": "Tell us a little more about your company",
+      "company_name": "Company Name",
+      "p_number": "P-number",
+      "name_contact_person": "Name contact person",
+      "email": "Email",
+      "mobile_phone": "Mobile phone",
+      "street": "Street",
+      "house_number": "House number",
+      "addition": "Addition",
+      "post_code": "Postcode",
+      "city": "City",
+      "website": "Website",
+      "kvk_number": "KVK number",
+      "tx_keur": "TX keur",
+      "tx_keur_tooltip": "The TX-Keur taxi quality mark is the only national quality mark in the taxi industry. It is issued by the independent TX-Keur foundation. If you are in possession of a TX-Keur label, you can drive more types of rides for Transvision .",
+      "other_quality_label": "Other quality label",
+      "other_quality_label_tooltip": "If you have another quality label apart from TX-keur please let us know and inform your account manager",
+      "dispatch_software": "Dispatch software",
+      "dispatch_software_tooltip": "If your company is working with Dispatch software or you are working with one or more driver app we would like to know as it could be taht there is a direct connection between Transvision and your Dispatch software already and we can send you trips digitally",
+      "solutions_question": "Do you use one or more of the following dispatch software solutions or driver apps for planning or accepting the trips.",
+      "whats_app_groep": "WhatsApp groep",
+      "whats_app_group_name": "whatsapp group name and phone of admin",
+      "telegram_groep": "Telegram groep",
+      "telegram_group_name": "Telegram group name and phone of admin",
+      "iban": "Iban",
+      "iban_tooltip": "Enter your Iban bank account number, we will transfer the fare amounts to this bank account number.",
+      "iban_bank_account_number": "Iban bank account number",
+      "vat_number": "VAT number"
+    },
+    "operational_details": {
+      "operational_details": "Operational details",
+      "fleet_data": "Fleet data",
+      "details_of_the_vehicles": "Details of the vehicles",
+      "company_name": "Company Name",
+      "p_number": "P-number",
+      "number_of_passenger_cars": "Number of passenger cars",
+      "number_of_passenger_cars_tooltip": "Total number of passenger cars in the fleet",
+      "license_plate": "License Plate",
+      "license_plate_tooltip": "Please fill in your licence plate so we can use the details during operations of trips",
+      "number_of_taxi_bus": "Number of taxi bus",
+      "number_of_taxi_bus_tooltip": "Total number of Taxi busses in the fleet",
+      "number_of_chairs": "Number of chairs for passengers",
+      "number_of_chairs_tooltip": "Number of chairs for passengers in each individual bus",
+      "number_of_seats": "Number of places for a wheelchair",
+      "number_of_seats_tooltip": "Number of places for a wheelchair in each individual bus",
+      "number_of_wheelchair_bus": "Number of wheelchair bus",
+      "number_of_wheelchair_bus_tooltip": "Number of wheelchair busses in your fleet",
+      "operational_data": "Operational data",
+      "when_do_you_drive": "When are you available and when do you drive",
+      "accepting_new_trips": "Central is available daily for accepting new trips",
+      "accepting_new_trips_tooltip": "Our CVL team is working 24/7 and occasionally might call you for trips that we have so we would like to know what your default times are your central is available to accept new calls and trips",
+      "telephone_or_via_dispatch_software": "Either by telephone or via a dispatch software package  (if applicable)",
+      "operational_times": "Operational times",
+      "operational_times_tooltip": "You can let us know if there are certain times that you are available for picking up new trips in general we will try to honour your operational times when calling you for new trips",
+      "times_that_we_normally_drive": "Times that we normally drive",
+      "times_that_we_normally_drive_tooltip": "Times that we typically drive",
+      "avg": "Avg. capacity at night (in number of cars)",
+      "avg_tooltip": "Avg. capacity at night (in number of cars)"
+    },
+    "upload_documents": {
+      "upload_documents": "Upload documents",
+      "documents": "Documents",
+      "following_documents_to_complete": "We need the following documents to complete the registration process",
+      "company_name": "Company Name",
+      "p_number": "P-number",
+      "optional_tx_keur_certificate": "Optional TX-keur certificate (or other quality mark certificate)",
+      "optional_tx_keur_certificate_tooltip": "If you have an TX-keur certificate (or other quality mark certificate) please upload a copy here and inform us on the valid until date in the field below",
+      "valid_until": "Valid until",
+      "mandatory_chamber": "Mandatory Chamber of Commerce (KvK) extract",
+      "mandatory_chamber_tooltip": "Upload a Chamber of Commerce (KvK) extract"
+    },
+    "quality": {
+      "quality": "Quality",
+      "how_do_we_work": "How do we work",
+      "important_values_and_standards_in_the_videos_below": "It is extremely easy important for Tranvision, DEXTR and our partners that we maintain high quality. That is why we explain our most important values and standards in the videos below.",
+      "company_name": "Company Name",
+      "p_number": "P-number",
+      "dextr_video_label": "Bekijk onderstaande video of videos voor de producten die uw account manager voor u beschikbaar heeft gesteld.",
+      "dextr_video_tooltip": "Elk product van Transvision of DEXTR heeft een eigen product video het is belangrijk dat u een goed beeld heeft van hoe er met de verschillende soorten passagiers dient te worden gewerkt.",
+      "nsv_video_label": "U bent geselecteerd om de ritten voor het NSV product van Transvision uit te voeren, hier horen bepaalde spelregels bij, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen",
+      "valys_video_label": "Valys is sociaal-recreatief bovenregionaal vervoer voor mobiliteitsbeperkte reizigers. ",
+      "valys_video_desc": "U bent geselecteerd om de ritten voor de Valys uit naam van Transvision uit te voeren, hier horen bepaalde spelregels bij, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen.",
+      "overige_video_label": "U bent geselecteerd om de ritten voor de Overige producten van Transvision uit te voeren, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen"
+    },
+    "agreement": {
+      "agreement": "Agreement",
+      "agreement_terms": "Agreement - Terms",
+      "following_agreements_and_terms": "Our account managers have drawn up the following agreements and conditions for you, which you can sign online on this page, using <a href='https://www.idin.nl/' target='_blank'>Idin</a>. Sometimes it is 1 and sometimes multiple agreements have to be signed. This depends on the number of products you will drive for us, the agreements have been signed and your account manager will complete your account and you can process it.",
+      "terms_and_conditions": "Terms And Conditions",
+      "agreement_dextr": "Agreement Dextr",
+      "processing_agreement": "Processing agreement",
+      "passenger_accident_insurance": "I declare that I have passenger accident insurance, WAM civil liability insurance for motor vehicles and commercial liability insurance.",
+      "signed": "signed",
+      "sign_now": "sign now with Idin",
+      "valid_until": "valid until",
+      "sign_name": "Naam van persoon die gaat ondertekenen"
+    },
+    "done": {
+      "done": "Done",
+      "almost_finished": "Almost finished",
+      "following_options_for_further": "We have the following options for further dispatching of our rides",
+      "telegram_app": "Telegram app",
+      "telegram_app_content": "Our telegram app keeps you informed of the available rides. We have a so-called telegram Webapp in which you can easily find the available rides, claim these rides and also the process while driving the ride is supported in the web app. You will also receive an overview list of rides that you have driven for us in the past. If you want to subscribe to the Telegram app, download the Telegram app on your phone and go to <a href='https://t.me/TV_driver_bot' target='_blank'>@TV_driver_bot</a> type /subscribe {{p_number}} {{key_register}} in which {{key_register}} is your unique key to register.",
+      "your_driver_app": "YourDriverApp",
+      "your_driver_app_content": "Transvision works together with YourDriverApp and is fully integrated, so you can handle our existing journeys in the YourDriverApp if you have already installed it on your phone. If you don't have it yet, the use of the app is free for drivers who drive for Transvision. Install the app and create an account with your mobile phone number which we have on record so that we can register you on the Transvision group. If you have an account on a different phone number, update your contact details in the company details page orr contact Ronald Oosting {{user_name}} so that we can activate it accordingly.",
+      "information_missing": "It appears you're missing some required information. Please double-check the details and try again."
+    },
+    "telegram_bot": {
+      "telegram_bot": "Telegram Bot",
+      "telegram_bot_account_details": "Telegram Bot account details",
+      "this_information_needs_to_be_filled": "This information needs to be filled for the Telegram bot to work Properly",
+      "wintopId": "Wintop ID",
+      "secretKey": "Secret Key",
+      "generatekey": "Generate key",
+      "invited_times": "Invited {{number_of_invitations}} times",
+      "telegram_information": "Telegram information needed for account:"
+    },
+    "login": {
+      "title": "Log in to Transvision and DEXTR partner portal",
+      "subtitle": "Enter your details below",
+      "no_account": "Don't have an account",
+      "get_started": "Get started",
+      "email": "Email address",
+      "password": "Password",
+      "login": "Login",
+      "welcome_back": "Hi, Welcome back!"
+    },
+    "register": {
+      "title": "Get started absolutely free.",
+      "subtitle": "Register as a transporting company and be able to claim trips for Transvision and DEXTR.",
+      "register": "Register",
+      "i_agree": "By signing up, I agree to",
+      "name": "Name",
+      "email": "Email address",
+      "password": "Password",
+      "and": "and",
+      "driving_trips": "Get started as transporting company and start claiming and driving trips."
+    },
+    "forgot_password": {
+      "title": "Forgot your password?",
+      "subtitle": "Please enter the email address associated with your account and We will email you a link to reset your password.",
+      "reset_password": "Reset Password",
+      "email": "Email address",
+      "back": "Back"
+    },
+    "verify": {
+      "title": "Please check your email!",
+      "subtitle": "We have emailed a 6-digit confirmation code to acb@domain, please enter the code in below box to verify your email.",
+      "email": "Email address",
+      "verify": "Verify",
+      "do_not_have_a_code": "Don’t have a code?",
+      "resend_code": "Resend code {{countdown}}",
+      "back": "Back"
+    },
+    "companies": {
+      "company_item": {
+        "cars": "{{number}} cars",
+        "minibus": "{{number}} minibus",
+        "wheelchair_bus": "{{number}} wheelchair bus",
+        "invited_times": "Invited {{number_of_invitations}} times",
+        "agenda_package": "Agenda package: ",
+        "driver_apps": "Driver app: ",
+        "status_telegram_bot": "Status Telegram bot: ",
+        "available_daily_title": "Central is available daily for accepting new trips",
+        "operational_time_title": "Operational times",
+        "add_to_list": "Add to list",
+        "see_all_details": "See all details",
+        "invite_for_onboarding": "Invite for onboarding"
+      },
+      "company_list": {
+        "search_in_this_area": "Search in this area"
+      }
+    },
+    "cvl": {
+      "transporter": "Transporter",
+      "invite": "{{number}} Invited"
+    }
+  },
+  "faqs": {
+    "company_name": {
+      "questions": "Company Name",
+      "explanation_faq": "When applying for your taxi operator license from KIWA, you provided your company name, which is listed on the license."
+    },
+    "pnr": {
+      "questions": "P-number",
+      "explanation_faq": "Upon issuing a taxi operator license by KIWA, the entrepreneur receives a Passenger Transport Number, a so-called P-number. You can find this number on the taxi transport license."
+    },
+    "agenda_packages": {
+      "questions": "Agenda Packages",
+      "explanation_faq": "The rides are received by a carrier in an agenda package, after which the ride is scheduled and sent to one of the own and/or affiliated drivers."
+    },
+    "driver_apps": {
+      "questions": "Driver Apps",
+      "explanation_faq": "There are various driver apps active in the Netherlands. If many drivers are connected to an app, we can take action to connect it to Transvision."
+    },
+    "upload_documents": {
+      "questions": "Upload Documents",
+      "explanation_faq": "Documents can be dragged (Drop) or searched (Browse) on your computer."
+    },
+    "customer_details_after_accept_the_ride": {
+      "questions": "After I have accepted the ride, how can I see the details of the customer?",
+      "explanation_faq": "The 'See passenger details' button becomes active (blue) 30 minutes before the pickup time of the ride. Click on it to view the passenger details and, if available, the passenger's phone number."
+    },
+    "what_to_do_if_your_car_has_problems": {
+      "questions": "What should I do if I have technical problems with my vehicle during a ride?",
+      "explanation_faq": "Contact the Transvision as soon as possible at <p>{{phone}}</p>, they are available 24/7. You can also find this phone number in the app under the menu item 'Contact'. They will then ensure that another carrier is found as soon as possible."
+    },
+    "possible_to_combine_multiple_rides_on_the_same_route": {
+      "questions": "Is it possible to combine multiple rides on the same route?",
+      "explanation_faq": "Combining DEXTR rides is not allowed. Valys rides may be combined."
+    },
+    "provide_feedback_about_ride_or_customer": {
+      "questions": "How can I provide feedback about a ride or customer?",
+      "explanation_faq": "This can be done by sending an email to <e>{{email}}</e>, or by contacting the central traffic control at telephone number <p>{{phone}}</p>"
+    },
+    "specific_dress_codes_for_drivers": {
+      "questions": "Are there specific dress codes for drivers?",
+      "explanation_faq": "Transvision expects all drivers who drive to be ambassadors of Transvision. This means: well-groomed, presentable, enthusiastic, professional, and friendly."
+    }
+  },
+  "cvl_detail": {
+    "see_companies_on_map": "See companies on map",
+    "see_drivers_on_map": "See live locations of drivers on map"
+  }
+}

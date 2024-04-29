@@ -1,0 +1,18 @@
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
+*.* text eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
+*.webp binary
+
+*.otf binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary

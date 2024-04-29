@@ -1,0 +1,318 @@
+{
+  "app": "app",
+  "agreement": "Overeenkomst",
+  "job": "job",
+  "user": "user",
+  "list": "list",
+  "edit": "edit",
+  "shop": "shop",
+  "blog": "blog",
+  "post": "post",
+  "mail": "mail",
+  "chat": "chat",
+  "file": "file",
+  "tour": "tour",
+  "cards": "cards",
+  "blank": "blank",
+  "order": "order",
+  "lists": "lists",
+  "create": "create",
+  "company_details": "Bedrijfsdetails",
+  "cvl-dashboard": "CVL Auction Dashboard",
+  "kanban": "kanban",
+  "general": "general",
+  "banking": "banking",
+  "booking": "booking",
+  "profile": "profile",
+  "account": "account",
+  "product": "product",
+  "invoice": "invoice",
+  "details": "details",
+  "checkout": "checkout",
+  "calendar": "calendar",
+  "overview": "overview",
+  "analytics": "analytics",
+  "ecommerce": "e-commerce",
+  "management": "management",
+  "menu_level": "menu level",
+  "item_label": "item label",
+  "description": "description",
+  "other_cases": "other cases",
+  "item_caption": "item caption",
+  "file_manager": "File Manager",
+  "menu_level_1a": "menu level 1a",
+  "menu_level_1b": "menu level 1b",
+  "menu_level_2a": "menu level 2a",
+  "menu_level_2b": "menu level 2b",
+  "menu_level_3a": "menu level 3a",
+  "menu_level_3b": "menu level 4b",
+  "item_disabled": "item disabled",
+  "item_by_roles": "item by roles",
+  "item_external_link": "item external link",
+  "only_admin_can_see_this_item": "Only admin can see this item",
+  "upgrade_to_pro": "Upgrade to Pro",
+  "demo": {
+    "title": "English"
+  },
+  "common": {
+    "ask_your_question": "Stel je vraag",
+    "faqs": "FAQ's",
+    "back": "Back",
+    "save_next": "Opslaan - volgende",
+    "monday": "Maandag",
+    "tuesday": "Dinsdag",
+    "wednesday": "Woensdag",
+    "thursday": "Donderdag",
+    "friday": "Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag",
+    "or": "of",
+    "save": "Opslaan",
+    "submit": "Indienen",
+    "cancel": "Annuleren",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "gender": "Geslacht",
+    "birthday": "Verjaardag",
+    "p_number": "P-nummer",
+    "next": "Volgende",
+    "status": "Status",
+    "selection": "Selectie"
+  },
+  "pages": {
+    "welcome": {
+      "welcome": "Welkom",
+      "about_us_our_products": "Over ons en onze producten",
+      "introduction_video": "Hier vindt u een introductievideo over Transvision, DEXTR en onze producten. we zijn altijd op zoek naar nieuwe transportbedrijven die met ons willen samenwerken en de klanten kunnen bedienen die onze mobiliteitsdiensten gebruiken om te reizen waar ze maar heen moeten.",
+      "company_name": "Bedrijfsnaam",
+      "p_number": "P-nummer"
+    },
+    "onboarding": {
+      "title": "Onboarding"
+    },
+    "company_details": {
+      "company_details": "Bedrijfsgegevens",
+      "little_more_company": "Vertel ons iets meer over je bedrijf",
+      "company_name": "Bedrijfsnaam",
+      "p_number": "P-nummer",
+      "name_contact_person": "Naam contact persoon",
+      "email": "Email",
+      "mobile_phone": "Mobiele telefoon",
+      "street": "Straat",
+      "house_number": "Huisnummer",
+      "addition": "Toevoeging",
+      "post_code": "Postcode",
+      "city": "Plaats",
+      "website": "Website",
+      "kvk_number": "KVK nummer",
+      "tx_keur": "TX keur",
+      "tx_keur_tooltip": "Het TX-Keur taxikeurmerk is het enige landelijke kwaliteitskeurmerk in de taxibranche. Het wordt uitgegeven door de onafhankelijke stichting TX-Keur. Als je in het bezit bent van een TX-keur label kun je meer soorten ritten voor Transvision rijden.",
+      "other_quality_label": "Ander keurmerk",
+      "other_quality_label_tooltip": "Heeft u naast TX-keur een ander keurmerk, laat het ons dan weten en informeer dan uw accountmanager",
+      "dispatch_software": "Agenda pakketten",
+      "dispatch_software_tooltip": "Als uw bedrijf met een agenda pakket werkt of u werkt al met een of meer driver apps, dan willen we dit graag weten het kan namelijk zijn dat er al een directe verbinding bestaat tussen Transvision en uw agenda pakket en dat we u ritten digitaal kunnen sturen",
+      "solutions_question": "Maken jullie gebruik van een of meer van de volgende agenda paketten of driver apps voor het plannen of accepteren van de ritten.",
+      "whats_app_groep": "WhatsApp groep",
+      "whats_app_group_name": "WhatsApp groep naam en tel beheerder ",
+      "telegram_groep": "Telegram groep",
+      "telegram_group_name": "Telegram groep naam en tel beheerder",
+      "iban": "Iban",
+      "iban_tooltip": "Vul je iban bankrekening nummer in, wij zullen de rit bedragen naar dit bankrekening nummer overmaken.",
+      "iban_bank_account_number": "Iban bankrekeningnummer",
+      "vat_number": "BTW nummer"
+    },
+    "operational_details": {
+      "operational_details": "Operationele details",
+      "fleet_data": "Vloot gegevens",
+      "details_of_the_vehicles": "Details over de wagens",
+      "company_name": "Bedrijfsnaam",
+      "p_number": "P-nummer",
+      "number_of_passenger_cars": "Aantal personenauto's",
+      "number_of_passenger_cars_tooltip": "Het aantal personenauto's in de vloot",
+      "license_plate": "Kenteken",
+      "license_plate_tooltip": "Vul uw kenteken in zodat we het kunnen registreren tijdens het uitvoeren van ritten",
+      "number_of_taxi_bus": "Aantal taxibus",
+      "number_of_taxi_bus_tooltip": "Totaal aantal taxi bussen in de vloot",
+      "number_of_chairs": "Aantal zitplaatsen voor passagiers",
+      "number_of_chairs_tooltip": "Voor elke individuele bus het aantal zitplaatsen voor passagiers",
+      "number_of_seats": "Aantal plaatsen voor een rolstoel",
+      "number_of_seats_tooltip": "Voor elke individuele bus het aantal plaatsen voor een rolstoel",
+      "number_of_wheelchair_bus": "Aantal rolstoelbus",
+      "number_of_wheelchair_bus_tooltip": "Het aantal rolstoelbussen in de vloot",
+      "operational_data": "Operationele gegevens",
+      "when_do_you_drive": "Wanneer zijn jullie bereikbaar en wanneer rijden jullie",
+      "accepting_new_trips": "Centrale dagelijks bereikbaar voor het aannemen van nieuwe ritten",
+      "accepting_new_trips_tooltip": "Ons CVL-team werkt 24/7 en kan u af en toe bellen voor nieuwe ritten die we hebben, dus we willen graag weten wat uw standaardtijden zijn. Dat uw centrale beschikbaar is om nieuwe ritten te accepteren",
+      "telephone_or_via_dispatch_software": "Hetzij telefonisch hetzij via een agenda pakket ( indien van toepassing )",
+      "operational_times": "Operationele tijden",
+      "operational_times_tooltip": "U kunt ons laten weten of er bepaalde tijden zijn dat u beschikbaar bent voor het ophalen van nieuwe ritten. Over het algemeen zullen we proberen uw operationele tijden te respecteren wanneer we u bellen voor nieuwe ritten",
+      "times_that_we_normally_drive": "We rijden normaal gesproken",
+      "times_that_we_normally_drive_tooltip": "We rijden normaal gesproken op deze tijden",
+      "avg": "Gem. capaciteit 's nachts (wagens)",
+      "avg_tooltip": "Gem. aantal wagens waar u 's nachts mee rijdt (in aantal wagens)"
+    },
+    "upload_documents": {
+      "upload_documents": "Upload documenten",
+      "documents": "Documenten",
+      "following_documents_to_complete": "We hebben de volgende documenten van jullie nodig om het aanmeldproces af te ronden",
+      "company_name": "Bedrijfsnaam",
+      "p_number": "P-nummer",
+      "optional_tx_keur_certificate": "Optioneel TX-keur certificaat ( of ander keurmerk certificaat)",
+      "optional_tx_keur_certificate_tooltip": "Heeft u een TX-keurcertificaat (of ander keurmerkcertificaat) upload dan hier een kopie en geef in onderstaand veld de geldigheidsdatum aan ons door",
+      "valid_until": "Geldig tot",
+      "mandatory_chamber": "Verplicht uittreksel van Kamer van Koophandel",
+      "mandatory_chamber_tooltip": "Upload een uitreksel van de Kamer van Koophandel"
+    },
+    "quality": {
+      "quality": "Kwaliteit",
+      "how_do_we_work": "Hoe werken wij",
+      "important_values_and_standards_in_the_videos_below": "Het is voor Transvision,  DEXTR en onze partners ontzettend belangrijk dat we een hoge kwaliteit handhaven. Daarom leggen we in onderstaande video's onze belangrijkste waarden en normen uit.",
+      "company_name": "Bedrijfsnaam",
+      "p_number": "P-nummer",
+      "dextr_video_label": "Bekijk onderstaande video of videos voor de producten die uw account manager voor u beschikbaar heeft gesteld.",
+      "dextr_video_tooltip": "Elk product van Transvision of DEXTR heeft een eigen product video het is belangrijk dat u een goed beeld heeft van hoe er met de verschillende soorten passagiers dient te worden gewerkt.",
+      "nsv_video_label": "U bent geselecteerd om de ritten voor het NSV product van Transvision uit te voeren, hier horen bepaalde spelregels bij, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen",
+      "valys_video_label": "Valys is sociaal-recreatief bovenregionaal vervoer voor mobiliteitsbeperkte reizigers. ",
+      "valys_video_desc": "U bent geselecteerd om de ritten voor de Valys uit naam van Transvision uit te voeren, hier horen bepaalde spelregels bij, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen.",
+      "overige_video_label": "U bent geselecteerd om de ritten voor de Overige producten van Transvision uit te voeren, bekijkt u onderstaande filmpje aandachtig en beantwoord de vragen"
+    },
+    "agreement": {
+      "agreement": "Overeenkomst",
+      "agreement_terms": "Overeenkomst - voorwaarden",
+      "following_agreements_and_terms": "Onze accountmanagers hebben de volgende overeenkomsten en voorwaarden voor u opgesteld, deze kunt u op deze pagina online tekenen, dit doet u middels <a href='https://www.idin.nl/' target='_blank'>Idin</a>, Soms is het 1 en soms moeten er meerdere overeenkomsten ondertekend worden. Dit is afhankelijk van het aantal producten dat u voor ons zult gaan rijden, zijn de overeenkomsten getekend dan maakt uw account manager uw account af en kunt u ritten afhandelen.",
+      "terms_and_conditions": "Algemene voorwaarden",
+      "agreement_dextr": "Overeenkomst Dextr",
+      "processing_agreement": "Verwerkingsovereenkomst",
+      "passenger_accident_insurance": "Ik verklaar dat ik een ongevallen inzittenden verzekering, een WAM Wettelijk aansprakelijksverzekering moterrijtuigen en een Bedrijfs Aansprakelijkheids verzekering heb.",
+      "signed": "ondertekend",
+      "sign_now": "teken nu met Idin",
+      "valid_until": "geldig tot",
+      "sign_name": "Naam van persoon die gaat ondertekenen"
+    },
+    "done": {
+      "done": "Done",
+      "almost_finished": "Bijna klaar",
+      "following_options_for_further": "We hebben de volgende mogelijkheden voor samenwerking.",
+      "telegram_app": "Telegram app",
+      "telegram_app_content": "Door onze telegram app wordt je op de hoogte gehouden van de beschikbare ritten. We hebben een zogenaamde telegram Webapp waarin je eenvoudig de beschikbare ritten kunt zien, deze ritten kunt claimen en ook het proces tijden het rijden van de rit wordt in de webapp ondersteund. Verder krijg je een keurig lijstje met ritten die je voor ons hebt gereden. Wil jij je abonneren op de Telegram app download dan de telegram app op je telefoon en ga naar <a href='https://t.me/TV_driver_bot' target='_blank'>@TV_driver_bot</a> type /subscribe {{p_number}} {{key_register}} waarbij {{key_register}} jouw unieke geheime sleutel is om je te registreren.",
+      "your_driver_app": "YourDriverApp",
+      "your_driver_app_content": "Transvision werkt samen met YourDriverApp en die is helemaal geintegreerd, dus kun je onze bestaande ritten afhandelen in de YourDriverApp als je die al geinstalleerd hebt op je telefoon. Heb je die nog niet, het gebruik van de app is gratis voor chauffeurs die voor Transvision rijden. \nInstalleer de app en maak een account aan met je mobile telefoon nummer zodat wij je kunnen registreren op de Transvision groep. Mocht je een account hebben op een ander telefoon nummer , pas je telefoonnummer dan aan in de bedrijfgegevens pagina of neem dan contact op met {{user_name}} zodat wij dat kunnen activeren.",
+      "information_missing": "Het lijkt erop dat er wat benodigde informatie ontbreekt. Controleer de gegevens nog eens en probeer het opnieuw."
+    },
+    "telegram_bot": {
+      "telegram_bot": "Telegram Bot",
+      "telegram_bot_account_details": "Telegram Bot accountgegevens",
+      "this_information_needs_to_be_filled": "Deze informatie moet worden ingevuld om de Telegram-bot goed te laten werken",
+      "wintopId": "Wintop ID",
+      "secretKey": "Geheime sleutel",
+      "generatekey": "Sleutel genereren",
+      "invited_times": "{{number_of_invitations}} keer uitgenodigd",
+      "telegram_information": "Telegraminformatie nodig voor account:"
+    },
+    "login": {
+      "title": "Log in op Transvision en DEXTR  Partner Portal",
+      "subtitle": "Vul hieronder uw gegevens in",
+      "create_an_account": "Account aanmaken",
+      "email": "Email adres",
+      "password": "Wachtwoord",
+      "login": "Login",
+      "welcome_back": "Hi, Welkom terug"
+    },
+    "register": {
+      "title": "Ga helemaal gratis aan de slag.",
+      "subtitle": "Registreer u als vervoerder zodat u ritten voor Transvision en DEXTR kunt claimen.",
+      "register": "Register",
+      "i_agree": "Door mij aan te melden, ga ik akkoord",
+      "name": "Naam",
+      "email": "Email adres",
+      "password": "Wachtwoord",
+      "and": "en",
+      "driving_trips": "Ga aan de slag als vervoerder en begin met het claimen en rijden van ritten."
+    },
+    "forgot_password": {
+      "title": "Uw wachtwoord vergeten?",
+      "subtitle": "Voer het e-mailadres in dat aan uw account is gekoppeld en we sturen u een link waarmee u uw wachtwoord opnieuw kunt instellen.",
+      "reset_password": "Wachtwoord opnieuw instellen",
+      "email": "Email adres",
+      "back": "Terug"
+    },
+    "verify": {
+      "title": "Controleer uw e-mail",
+      "subtitle": "We hebben een 6-cijferige bevestigingscode gemaild naar acb@domain. Voer de code in het onderstaande vak in om uw e-mailadres te verifiëren.",
+      "email": "Email adres",
+      "verify": "Verifiëren",
+      "do_not_have_a_code": "Heeft u geen code ontvangen?",
+      "resend_code": "Code nogmaals versturen {{countdown}}",
+      "back": "Terug"
+    },
+    "companies": {
+      "company_item": {
+        "cars": "{{number}} auto's",
+        "minibus": "{{number}} minibus",
+        "wheelchair_bus": "{{number}} rolstoelbus",
+        "invited_times": "{{number_of_invitations}} keer uitgenodigd",
+        "agenda_package": "Agenda Pakket: ",
+        "driver_apps": "Driver app: ",
+        "status_telegram_bot": "Status Telegram bot: ",
+        "available_daily_title": "Central is dagelijks bereikbaar voor het accepteren van nieuwe ritten",
+        "operational_time_title": "Operationele tijden",
+        "add_to_list": "Toevoegen aan lijst",
+        "see_all_details": "Bekijk alle details",
+        "invite_for_onboarding": "Uitnodigen voor onboarding"
+      },
+      "company_list": {
+        "search_in_this_area": "Zoek in dit gebied"
+      }
+    },
+    "cvl": {
+      "transporter": "Vervoerder",
+      "invite": "{{number}} Uitgenodigd"
+    }
+  },
+  "faqs": {
+    "company_name": {
+      "questions": "Bedrijfsnaam",
+      "explanation_faq": "Bij de aanvraag van uw ondernemersvergunning voor Taxivervoer door de KIWA heeft u uw bedrijfsnaam opgegeven, deze staat vermeld op de vergunning."
+    },
+    "pnr": {
+      "questions": "P-nummer",
+      "explanation_faq": "Bij het verstrekken van een ondernemersvergunning voor Taxivervoer door de KIWA, ontvangt de ondernemer een Personenvervoernummer, een zogenoemd P-nummer. U vindt dit nummer op de vergunning voor Taxivervoer."
+    },
+    "agenda_packages": {
+      "questions": "Agendapakketten",
+      "explanation_faq": "De ritten worden ontvangen door een vervoerder in een agendapakket, daarna word de rit gepland en verzonden naar een van de eigen en/of aangesloten chauffeurs."
+    },
+    "driver_apps": {
+      "questions": "Driver App’s",
+      "explanation_faq": "Er zijn diverse driver-App’s actief in Nederland, mochten er veel chauffeurs aangesloten zijn bij een App, dan kunnen wij actie ondernemen om deze aan te haken bij Transvision."
+    },
+    "upload_documents": {
+      "questions": "Upload documenten",
+      "explanation_faq": "Documenten kunnen gesleept (Drop) of opgezocht (Browse) worden op uw computer"
+    },
+    "customer_details_after_accept_the_ride": {
+      "questions": "Nadat ik de rit heb geaccepteerd, hoe kan ik de details van de klant zien?",
+      "explanation_faq": "De knop ‘Zie passagier details’ wordt actief (blauw) 30 minuten voor de ophaaltijd van de rit. Klik daarop om de passagiersdetails en, indien beschikbaar, het telefoonnummer van de passagier te bekijken."
+    },
+    "what_to_do_if_your_car_has_problems": {
+      "questions": "Wat moet ik doen als ik technische problemen heb met mijn voertuig tijdens een rit?",
+      "explanation_faq": "Neem zo snel mogelijk contact op met de Transvision via <p>{{phone}}</p>, ze zijn 24/7 beschikbaar. Je kunt dit telefoonnummer ook vinden in de app onder het menu-item ‘Contact’. Dan kunnen zij zorgdragen dat er z.s.m. een andere vervoerder gevonden kan worden."
+    },
+    "possible_to_combine_multiple_rides_on_the_same_route": {
+      "questions": "Is het mogelijk om meerdere ritten op dezelfde route te combineren?",
+      "explanation_faq": "Het combineren van DEXTR ritten is niet toegestaan. Valys ritten mogen wel gecombineerd worden."
+    },
+    "provide_feedback_about_ride_or_customer": {
+      "questions": "Hoe kan ik feedback geven over een rit of klant?",
+      "explanation_faq": "Dit kan door middel van een mail te sturen aan <e>{{email}}</e>, of contact opnemen met de centrale verkeersleiding op telefoonnummer <p>{{phone}}</p>"
+    },
+    "specific_dress_codes_for_drivers": {
+      "questions": "Zijn er specifieke kledingvoorschriften voor chauffeurs?",
+      "explanation_faq": "Transvision verwacht dat alle chauffeurs die rijden een ambassadeur van Transvision zijn. Dat houdt in: verzorgd, representatief, enthousiast, professioneel en vriendelijk."
+    }
+  },
+  "cvl_detail": {
+    "see_companies_on_map": "Toon bedrijfslocaties op kaart",
+    "see_drivers_on_map": "Toon live locaties van de chauffeurs op de kaart"
+  }
+}
