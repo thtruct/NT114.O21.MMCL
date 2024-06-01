@@ -8,10 +8,12 @@ import { LoadingScreen } from 'src/components/loading-screen';
 
 const DashboardPage = lazy(() => import('src/pages/dashboard/app'));
 
+const UserAccountPage = lazy(() => import('src/pages/user/account'));
+
 // ----------------------------------------------------------------------
 export const dashboardRoutes = [
   {
-    path: '/app',
+    path: '',
     element: (
       <AuthGuard>
         {/* <RoleBasedGuard hasContent> */}
@@ -25,8 +27,15 @@ export const dashboardRoutes = [
     ),
     children: [
       {
-        path: '',
+        path: 'app',
         element: <DashboardPage />,
+      },
+      {
+        path: 'user',
+        children: [
+          { element: <UserAccountPage />, index: true },
+          { path: 'account', element: <UserAccountPage /> },
+        ],
       },
     ],
   },

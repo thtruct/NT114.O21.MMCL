@@ -22,7 +22,7 @@ export default function AfterLoginCallback({ children }: Props) {
   const router = useRouter();
 
   const { user } = useAuthContext();
-  console.log('user', user);
+
   const redirect = useCallback(() => {
     if (user) {
       router.replace('/app');

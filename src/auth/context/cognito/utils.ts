@@ -38,16 +38,19 @@ export const getCurrentUser = async (): Promise<{ [id: string]: any } | null> =>
         } else if (session === null) {
           resolve(null);
         } else {
-          const idToken = session?.getIdToken();
-          axios.defaults.headers.common.Authorization = idToken.getJwtToken();
-          // getUserProfile
-          axios.get(`${endpoints.auth.me}`).then((res) => {
-            resolve({
-              ...res.data,
-              ...idToken.decodePayload(),
-              accessToken: session?.getAccessToken().getJwtToken(),
-            });
+          resolve({
+            accessToken: session?.getAccessToken().getJwtToken(),
           });
+          // const idToken = session?.getIdToken();
+          // axios.defaults.headers.common.Authorization = idToken.getJwtToken();
+          // getUserProfile
+          // axios.get(`${endpoints.auth.me}`).then((res) => {
+          //   resolve({
+          //     ...res.data,
+          //     ...idToken.decodePayload(),
+          //     accessToken: session?.getAccessToken().getJwtToken(),
+          //   });
+          // });
         }
       });
     } else {
@@ -75,15 +78,16 @@ export const signInCognito = (email: string, password: string): Promise<{ [id: s
 
     cognitoUser.authenticateUser(authDetails, {
       onSuccess: (session) => {
-        const idToken = session?.getIdToken();
-        axios.defaults.headers.common.Authorization = idToken.getJwtToken();
+        // const idToken = session?.getIdToken();
+        // axios.defaults.headers.common.Authorization = idToken.getJwtToken();
         // getUserProfile
-        axios.get(endpoints.auth.me).then((res) => {
-          resolve({
-            ...res.data,
-            ...session.getIdToken().decodePayload(),
-          });
-        });
+        // axios.get(endpoints.auth.me).then((res) => {
+        //   resolve({
+        //     ...res.data,
+        //     ...session.getIdToken().decodePayload(),
+        //   });
+        // });
+        resolve(session.getIdToken().decodePayload());
       },
       onFailure: (err) => {
         reject(err);

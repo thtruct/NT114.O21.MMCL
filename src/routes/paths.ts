@@ -5,7 +5,7 @@ const ROOTS = {
   DOMAIN: window.location.host,
   AUTH: '/auth',
   ADMIN: '/admin',
-  DASHBOARD: '/dashboard',
+  DASHBOARD: '/',
 };
 
 // ----------------------------------------------------------------------
