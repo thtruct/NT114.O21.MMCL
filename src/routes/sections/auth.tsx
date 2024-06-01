@@ -63,7 +63,7 @@ const auth = {
     {
       path: 'verify',
       element: (
-        <AuthModernCompactLayout>
+        <AuthModernCompactLayout showLogo={false}>
           <VerifyPage />
         </AuthModernCompactLayout>
       ),

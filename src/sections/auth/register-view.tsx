@@ -8,23 +8,17 @@ import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-// @mui
 import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 
-// routes
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
 
-// hooks
 import { useBoolean } from 'src/hooks/use-boolean';
 
-// import { useTranslate } from 'src/locales';
-// auth
 import { useAuthContext } from 'src/auth/hooks';
 
-// components
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 
@@ -34,7 +28,6 @@ import AuthSocial from './auth-social';
 
 export default function RegisterView() {
   const { register } = useAuthContext();
-  // const { t } = useTranslate();
 
   const [errorMsg, setErrorMsg] = useState('');
 

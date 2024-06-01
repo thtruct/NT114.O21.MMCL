@@ -11,7 +11,7 @@ const DashboardPage = lazy(() => import('src/pages/dashboard/app'));
 // ----------------------------------------------------------------------
 export const dashboardRoutes = [
   {
-    path: '',
+    path: '/app',
     element: (
       <AuthGuard>
         {/* <RoleBasedGuard hasContent> */}
