@@ -36,5 +36,5 @@ export default {
 ## Deploy
 
 ```shell
-yarn build && aws s3 --profile masterman sync build s3://nt114-o21-mmcl --delete
+yarn build && aws s3 --profile masterman sync dist s3://nt114-o21-mmcl --delete
 ```
