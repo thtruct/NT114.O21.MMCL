@@ -9,7 +9,7 @@ import ThemeProvider from './theme';
 import { SettingsProvider } from './components/settings';
 import { SnackbarProvider } from './components/snackbar';
 import { MotionLazy } from './components/animate/motion-lazy';
-import { AuthConsumer, AuthProvider } from './auth/context/jwt';
+import { AuthConsumer, AuthProvider } from './auth/context/cognito';
 
 function App() {
   return (

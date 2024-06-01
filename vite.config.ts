@@ -31,6 +31,9 @@ export default defineConfig({
       },
     ],
   },
+  define: {
+    global: {},
+  },
   server: {
     port: 3000,
   },

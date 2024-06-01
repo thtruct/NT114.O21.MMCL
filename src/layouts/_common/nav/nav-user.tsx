@@ -1,11 +1,6 @@
-// @mui
 import { Box, Stack, Avatar, Typography } from '@mui/material';
 
-import { VERSION } from 'src/config-global';
-// hooks
 import { useAuthContext } from 'src/auth/hooks';
-
-import Label from 'src/components/label';
 
 // ----------------------------------------------------------------------
 
@@ -49,11 +44,6 @@ export default function NavUser() {
             {user?.email}
           </Typography>
         </Stack>
-        <div>
-          <Label color="primary" sx={{ textTransform: 'lowercase' }}>
-            {VERSION}
-          </Label>
-        </div>
       </Stack>
     </Stack>
   );

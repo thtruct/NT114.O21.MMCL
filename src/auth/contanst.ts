@@ -6,6 +6,7 @@ export const GROUP_FIELD = 'cognito:groups'; // admin or undefined for normal us
 export const ROLE_FIELD = 'role'; // SystemAdmin, AccountManager, CVL or undefined for transforter/user
 
 export const NAVIGATIONS = {
+  home: paths,
   admin: {
     pagePrefix: paths.admin.root,
     home: paths.admin.root,

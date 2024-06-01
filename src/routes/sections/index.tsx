@@ -2,7 +2,8 @@ import { Navigate, useRoutes } from 'react-router-dom';
 // layouts
 // import MainLayout from 'src/layouts/main';
 // config
-// import { PATH_AFTER_LOGIN } from 'src/config-global';
+import AfterLoginCallback from 'src/pages/callback/after-login-callback';
+
 import { authRoutes } from './auth';
 import { mainRoutes } from './main';
 import { dashboardRoutes } from './dashboard';
@@ -11,19 +12,11 @@ import { dashboardRoutes } from './dashboard';
 
 export default function Router() {
   return useRoutes([
-    // SET INDEX PAGE WITH SKIP HOME PAGE
+    // SET INDEX PAGE WITH HOME PAGE
     {
       path: '/',
-      element: <Navigate to="/app" replace />,
+      element: <AfterLoginCallback />,
     },
-
-    // ----------------------------------------------------------------------
-
-    // SET INDEX PAGE WITH HOME PAGE
-    // {
-    //   path: '/',
-    //   element: <AfterLoginCallback/>,
-    // },
 
     // Auth routes
     ...authRoutes,
