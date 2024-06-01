@@ -14,7 +14,7 @@ export default function Router() {
     // SET INDEX PAGE WITH SKIP HOME PAGE
     {
       path: '/',
-      element: <Navigate to={'/app'} replace />,
+      element: <Navigate to="/app" replace />,
     },
 
     // ----------------------------------------------------------------------

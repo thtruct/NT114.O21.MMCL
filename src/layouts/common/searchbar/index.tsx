@@ -1,6 +1,6 @@
 import parse from 'autosuggest-highlight/parse';
 import match from 'autosuggest-highlight/match';
-import { memo, useCallback, useState } from 'react';
+import { memo, useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';

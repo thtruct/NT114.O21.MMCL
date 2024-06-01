@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { toggleButtonClasses, ToggleButtonProps } from '@mui/material/ToggleButton';
+import { ToggleButtonProps, toggleButtonClasses } from '@mui/material/ToggleButton';
 
 // ----------------------------------------------------------------------
 

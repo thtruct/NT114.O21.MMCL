@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { drawerClasses, DrawerProps } from '@mui/material/Drawer';
+import { DrawerProps, drawerClasses } from '@mui/material/Drawer';
 
 import { paper } from '../../css';
 

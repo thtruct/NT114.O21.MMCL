@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 // config
-import { API_SERVICES, HOST_API } from 'src/config-global';
+import { HOST_API, API_SERVICES } from 'src/config-global';
 
 // ----------------------------------------------------------------------
 

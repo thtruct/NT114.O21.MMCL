@@ -11,10 +11,10 @@ import { bgBlur } from 'src/theme/css';
 import Logo from 'src/components/logo';
 import { useSettingsContext } from 'src/components/settings';
 
-import { HEADER, NAV } from '../config-layout';
-import AccountPopover from '../common/account-popover';
 import ButtonHome from './button-home';
 import InputSearch from './input-search';
+import { NAV, HEADER } from '../config-layout';
+import AccountPopover from '../common/account-popover';
 
 // ----------------------------------------------------------------------
 
@@ -39,10 +39,10 @@ export default function Header({ onOpenNav }: Props) {
 
   const renderContent = (
     <Stack
-      direction={'column'}
+      direction="column"
       width={1}
-      justifyContent={'center'}
-      alignItems={'center'}
+      justifyContent="center"
+      alignItems="center"
       spacing={2}
     >
       {/* {lgUp && isNavHorizontal && <Logo sx={{ mr: 2.5 }} />} */}
@@ -61,7 +61,7 @@ export default function Header({ onOpenNav }: Props) {
 
         {/* <ContactsPopover /> */}
 
-        {/*<SettingsButton/>*/}
+        {/* <SettingsButton/> */}
 
         <ButtonHome />
         <InputSearch />

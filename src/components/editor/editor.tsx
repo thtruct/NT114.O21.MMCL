@@ -1,8 +1,8 @@
-import 'src/utils/highlight';
-
 import ReactQuill from 'react-quill';
 
 import { alpha } from '@mui/material/styles';
+
+import 'src/utils/highlight';
 
 import { EditorProps } from './types';
 import { StyledEditor } from './styles';

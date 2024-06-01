@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { fabClasses, FabProps } from '@mui/material/Fab';
+import { FabProps, fabClasses } from '@mui/material/Fab';
 
 // ----------------------------------------------------------------------
 

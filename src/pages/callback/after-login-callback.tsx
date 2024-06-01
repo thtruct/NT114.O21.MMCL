@@ -1,7 +1,7 @@
 // import { useEffect, useCallback } from 'react';
 
 // hooks
-import { useRouter } from 'src/routes/hooks';
+// import { useRouter } from 'src/routes/hooks';
 //
 // import { useAuthContext } from 'src/auth/hooks';
 // components
@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function AfterLoginCallback({ children }: Props) {
-  const router = useRouter();
+  // const router = useRouter();
   //
   // const { user } = useAuthContext();
   //

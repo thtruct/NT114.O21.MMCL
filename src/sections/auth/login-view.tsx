@@ -132,7 +132,7 @@ export default function LoginView() {
         </LoadingButton>
 
         <Stack direction="row" spacing={0.5}>
-          <Typography variant="body2">Don't have account</Typography>
+          <Typography variant="body2">Do not have account</Typography>
 
           <Link component={RouterLink} href={paths.auth.register} variant="subtitle2">
             Register

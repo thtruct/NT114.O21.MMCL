@@ -108,7 +108,7 @@ export default function NewPasswordView() {
         InputLabelProps={{ shrink: true }}
       />
 
-      {/*<RHFCode name="code"/>*/}
+      {/* <RHFCode name="code"/> */}
 
       <RHFTextField
         name="password"
@@ -184,8 +184,7 @@ export default function NewPasswordView() {
   );
 
   const renderHead = (
-    <>
-      <Stack spacing={1} sx={{ my: 5 }}>
+    <Stack spacing={1} sx={{ my: 5 }}>
         <Typography variant="h4">Request sent successfully!</Typography>
 
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -194,7 +193,6 @@ export default function NewPasswordView() {
           Please enter the code in below box to verify your email.
         </Typography>
       </Stack>
-    </>
   );
 
   return (

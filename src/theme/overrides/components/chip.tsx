@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { chipClasses, ChipProps } from '@mui/material/Chip';
+import { ChipProps, chipClasses } from '@mui/material/Chip';
 
 // ----------------------------------------------------------------------
 

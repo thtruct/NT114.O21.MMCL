@@ -1,8 +1,9 @@
 import Box from '@mui/material/Box';
-import Logo from 'src/components/logo';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+
+import Logo from 'src/components/logo';
 
 // ----------------------------------------------------------------------
 
@@ -12,11 +13,10 @@ type Props = {
 };
 
 export default function AuthModernCompactLayout({ children, title }: Props) {
-  const renderLogo = <Logo disabledLink={true} sx={{ height: 80 }} />;
+  const renderLogo = <Logo disabledLink sx={{ height: 80 }} />;
 
   return (
-    <>
-      <Box
+    <Box
         component="main"
         sx={{
           py: 12,
@@ -60,6 +60,5 @@ export default function AuthModernCompactLayout({ children, title }: Props) {
           </Stack>
         </Card>
       </Box>
-    </>
   );
 }

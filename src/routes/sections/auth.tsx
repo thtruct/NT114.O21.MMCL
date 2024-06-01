@@ -5,6 +5,7 @@ import { GuestGuard } from 'src/auth/guard';
 // import { PATH_AFTER_LOGIN } from 'src/config-global';
 // import AuthSocialCallback from 'src/pages/callback/social-callback';
 import { LoadingScreen } from 'src/components/loading-screen';
+
 import AuthModernCompactLayout from '../../layouts/auth/modern-compact';
 
 // ----------------------------------------------------------------------

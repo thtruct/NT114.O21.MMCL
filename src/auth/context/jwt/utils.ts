@@ -35,7 +35,7 @@ export const isValidToken = (accessToken: string) => {
 // ----------------------------------------------------------------------
 
 export const tokenExpired = (exp: number) => {
-  // eslint-disable-next-line prefer-const
+   
   let expiredTimer;
 
   const currentTime = Date.now();

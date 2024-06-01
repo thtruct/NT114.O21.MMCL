@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 // import { RouterLink } from 'src/routes/components';
 import { PageNotFoundIllustration } from 'src/assets/illustrations';
 
-import { MotionContainer, varBounce } from 'src/components/animate';
+import { varBounce, MotionContainer } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
@@ -35,9 +35,9 @@ export default function NotFoundView() {
         />
       </m.div>
 
-      {/*<Button component={RouterLink} href="/" size="large" variant="contained">*/}
-      {/*  Go to Home*/}
-      {/*</Button>*/}
+      {/* <Button component={RouterLink} href="/" size="large" variant="contained"> */}
+      {/*  Go to Home */}
+      {/* </Button> */}
     </MotionContainer>
   );
 }

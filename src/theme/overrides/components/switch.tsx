@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { switchClasses, SwitchProps } from '@mui/material/Switch';
+import { SwitchProps, switchClasses } from '@mui/material/Switch';
 
 // ----------------------------------------------------------------------
 

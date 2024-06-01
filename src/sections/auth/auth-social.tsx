@@ -1,14 +1,14 @@
 // @mui
-import { IconButton, Stack } from '@mui/material';
+import { Stack, IconButton } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 // components
 import Iconify from 'src/components/iconify';
 
-import { useTranslate } from '../../locales';
+// import { useTranslate } from '../../locales';
 // hooks
 // types
 import { ESocialProvider } from '../../auth/types';
-import Typography from '@mui/material/Typography';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ type Props = {
   title?: string;
 };
 export default function AuthSocial({ title }: Props) {
-  const { t } = useTranslate();
+  // const { t } = useTranslate();
   // const { generateAuthorizeUri } = useAuthContext();
 
   const handleSocialLogin = async (provider: ESocialProvider) => {
@@ -25,7 +25,7 @@ export default function AuthSocial({ title }: Props) {
   };
 
   return (
-    <Stack direction={'row'} alignItems={'center'} justifyContent={'center'} spacing={1}>
+    <Stack direction="row" alignItems="center" justifyContent="center" spacing={1}>
       {title && <Typography variant="subtitle1">{title}</Typography>}
       <IconButton onClick={() => handleSocialLogin(ESocialProvider.google)}>
         <Iconify icon="devicon:google" color="#DF3E30" width={28} height={28} />

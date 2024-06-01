@@ -20,20 +20,21 @@ import { RouterLink } from 'src/routes/components';
 // hooks
 import { useBoolean } from 'src/hooks/use-boolean';
 
-import { useTranslate } from 'src/locales';
+// import { useTranslate } from 'src/locales';
 // auth
 import { useAuthContext } from 'src/auth/hooks';
 
 // components
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
+
 import AuthSocial from './auth-social';
 
 // ----------------------------------------------------------------------
 
 export default function RegisterView() {
   const { register } = useAuthContext();
-  const { t } = useTranslate();
+  // const { t } = useTranslate();
 
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -84,7 +85,7 @@ export default function RegisterView() {
 
   const renderHead = (
     <Stack spacing={2} sx={{ mb: 5 }}>
-      <Stack direction="row" spacing={0.5} justifyContent={'flex-end'}>
+      <Stack direction="row" spacing={0.5} justifyContent="flex-end">
         <Typography variant="body2">Already have an account?</Typography>
 
         <Link
@@ -96,32 +97,10 @@ export default function RegisterView() {
           Login
         </Link>
       </Stack>
-      <Typography variant="h4" color={'#E49D13'}>
+      <Typography variant="h4" color="#E49D13">
         Register your account
       </Typography>
     </Stack>
-  );
-
-  const renderTerms = (
-    <Typography
-      component="div"
-      sx={{
-        color: 'text.secondary',
-        mt: 2.5,
-        typography: 'caption',
-        textAlign: 'center',
-      }}
-    >
-      {t('pages.register.i_agree')}&nbsp;
-      <Link underline="always" color="text.primary">
-        Terms of Service
-      </Link>
-      &nbsp;{t('pages.register.and')} &nbsp;
-      <Link underline="always" color="text.primary">
-        Privacy Policy
-      </Link>
-      .
-    </Typography>
   );
 
   const renderForm = (
@@ -167,7 +146,7 @@ export default function RegisterView() {
       {renderForm}
 
       <Stack mt={3}>
-        <AuthSocial title={'Register your account with'} />
+        <AuthSocial title="Register your account with" />
       </Stack>
     </FormProvider>
   );

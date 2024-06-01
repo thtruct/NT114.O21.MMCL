@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 // date fns
-import { enUS as enUSAdapter, vi as viAdapter } from 'date-fns/locale';
+import { vi as viAdapter, enUS as enUSAdapter } from 'date-fns/locale';
 
 // core (MUI)
 import { enUS as enUSCore } from '@mui/material/locale';

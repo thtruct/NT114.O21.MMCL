@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 import { useRouter, useSearchParams } from 'src/routes/hooks';
 

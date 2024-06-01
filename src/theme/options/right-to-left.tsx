@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import createCache from '@emotion/cache';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';

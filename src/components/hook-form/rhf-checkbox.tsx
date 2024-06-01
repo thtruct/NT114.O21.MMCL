@@ -6,8 +6,8 @@ import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControlLabel, {
-  formControlLabelClasses,
   FormControlLabelProps,
+  formControlLabelClasses,
 } from '@mui/material/FormControlLabel';
 
 // ----------------------------------------------------------------------

@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 
-import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { bgBlur } from 'src/theme/css';
@@ -11,8 +10,8 @@ import { bgBlur } from 'src/theme/css';
 import Logo from 'src/components/logo';
 import { useSettingsContext } from 'src/components/settings';
 
+import { NAV } from '../../config-layout';
 import AccountPopover from '../account-popover';
-import { HEADER, NAV } from '../../config-layout';
 
 // ----------------------------------------------------------------------
 
@@ -31,18 +30,8 @@ export default function Header({ onOpenNav }: Props) {
 
   const lgUp = useResponsive('up', 'lg');
 
-  const offset = useOffSetTop(HEADER.H_DESKTOP);
-
-  const offsetTop = offset && !isNavHorizontal;
-
   const renderContent = (
-    <Stack
-      direction={'column'}
-      width={1}
-      justifyContent={'center'}
-      alignItems={'center'}
-      spacing={2}
-    >
+    <Stack direction="column" width={1} justifyContent="center" alignItems="center" spacing={2}>
       {/* {lgUp && isNavHorizontal && <Logo sx={{ mr: 2.5 }} />} */}
 
       <Logo sx={{ my: 1, width: 'fit-content' }} />
@@ -59,7 +48,7 @@ export default function Header({ onOpenNav }: Props) {
 
         {/* <ContactsPopover /> */}
 
-        {/*<SettingsButton/>*/}
+        {/* <SettingsButton/> */}
 
         <AccountPopover />
         <AccountPopover />

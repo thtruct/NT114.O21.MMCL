@@ -3,17 +3,17 @@ import { m } from 'framer-motion';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 // @mui
-import { SxProps, Theme } from '@mui/material/styles';
+import { Theme, SxProps } from '@mui/material/styles';
 
 // assets
 import { ForbiddenIllustration } from 'src/assets/illustrations';
 
 // components
-import { MotionContainer, varBounce } from 'src/components/animate';
+import { varBounce, MotionContainer } from 'src/components/animate';
 
 // hooks
 import { useAuthContext } from '../hooks';
-import { GROUP_FIELD, ROLE_FIELD } from '../contanst';
+import { ROLE_FIELD, GROUP_FIELD } from '../contanst';
 
 // ----------------------------------------------------------------------
 

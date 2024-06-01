@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { alertClasses, AlertProps } from '@mui/material/Alert';
+import { AlertProps, alertClasses } from '@mui/material/Alert';
 
 // ----------------------------------------------------------------------
 

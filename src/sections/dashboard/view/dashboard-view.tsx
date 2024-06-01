@@ -53,8 +53,7 @@ export default function DashboardView() {
   ];
 
   return (
-    <>
-      <Box>
+    <Box>
         <ImageList variant="masonry" cols={3} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} sx={{ borderRadius: 16 }}>
@@ -69,6 +68,5 @@ export default function DashboardView() {
           ))}
         </ImageList>
       </Box>
-    </>
   );
 }

@@ -1,5 +1,5 @@
 import { alpha, Theme } from '@mui/material/styles';
-import { buttonClasses, ButtonProps } from '@mui/material/Button';
+import { ButtonProps, buttonClasses } from '@mui/material/Button';
 
 // ----------------------------------------------------------------------
 
