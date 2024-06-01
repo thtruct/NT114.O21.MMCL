@@ -47,7 +47,7 @@ const auth = {
     {
       path: 'new-password',
       element: (
-        <AuthModernCompactLayout>
+        <AuthModernCompactLayout showLogo={false}>
           <NewPasswordPage />
         </AuthModernCompactLayout>
       ),
@@ -55,7 +55,7 @@ const auth = {
     {
       path: 'forgot-password',
       element: (
-        <AuthModernCompactLayout>
+        <AuthModernCompactLayout showLogo={false}>
           <ForgotPasswordPage />
         </AuthModernCompactLayout>
       ),

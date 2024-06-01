@@ -27,7 +27,7 @@ import { useAuthContext } from 'src/auth/hooks';
 
 // components
 import Iconify from 'src/components/iconify';
-import FormProvider, { RHFTextField } from 'src/components/hook-form';
+import FormProvider, { RHFCode, RHFTextField } from 'src/components/hook-form';
 
 // ----------------------------------------------------------------------
 
@@ -80,6 +80,7 @@ export default function NewPasswordView() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
+      console.log('data', data);
       await newPassword?.(data.email, data.code, data.password);
 
       router.push(paths.auth.login);
@@ -108,7 +109,7 @@ export default function NewPasswordView() {
         InputLabelProps={{ shrink: true }}
       />
 
-      {/* <RHFCode name="code"/> */}
+      <RHFCode name="code" />
 
       <RHFTextField
         name="password"
@@ -185,14 +186,14 @@ export default function NewPasswordView() {
 
   const renderHead = (
     <Stack spacing={1} sx={{ my: 5 }}>
-        <Typography variant="h4">Request sent successfully!</Typography>
+      <Typography variant="h4">Request sent successfully!</Typography>
 
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          We&apos;ve sent a 6-digit confirmation email to your email.
-          <br />
-          Please enter the code in below box to verify your email.
-        </Typography>
-      </Stack>
+      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        We&apos;ve sent a 6-digit confirmation email to your email.
+        <br />
+        Please enter the code in below box to verify your email.
+      </Typography>
+    </Stack>
   );
 
   return (
