@@ -14,6 +14,8 @@ import { useSettingsContext } from 'src/components/settings';
 import ButtonHome from './button-home';
 import InputSearch from './input-search';
 import { NAV, HEADER } from '../config-layout';
+import ImageSearchPopup from './image-search-popup';
+import { useBoolean } from '../../hooks/use-boolean';
 import AccountPopover from '../common/account-popover';
 
 // ----------------------------------------------------------------------
@@ -24,6 +26,7 @@ type Props = {
 
 export default function Header({ onOpenNav }: Props) {
   const theme = useTheme();
+  const open = useBoolean();
 
   const settings = useSettingsContext();
 
@@ -38,13 +41,7 @@ export default function Header({ onOpenNav }: Props) {
   const offsetTop = offset && !isNavHorizontal;
 
   const renderContent = (
-    <Stack
-      direction="column"
-      width={1}
-      justifyContent="center"
-      alignItems="center"
-      spacing={2}
-    >
+    <Stack direction="column" width={1} justifyContent="center" alignItems="center" spacing={2}>
       {/* {lgUp && isNavHorizontal && <Logo sx={{ mr: 2.5 }} />} */}
 
       <Logo sx={{ my: 1, width: 'fit-content' }} />
@@ -64,50 +61,53 @@ export default function Header({ onOpenNav }: Props) {
         {/* <SettingsButton/> */}
 
         <ButtonHome />
-        <InputSearch />
+        <InputSearch onClick={open.onTrue} />
         <AccountPopover />
       </Stack>
     </Stack>
   );
 
   return (
-    <AppBar
-      sx={{
-        height: HEADER.H_MOBILE,
-        zIndex: theme.zIndex.appBar + 1,
-        ...bgBlur({
-          color: '#EDECF5',
-        }),
-        transition: theme.transitions.create(['height'], {
-          duration: theme.transitions.duration.shorter,
-        }),
-        ...(lgUp && {
-          width: `calc(100% - 1px)`,
-          backgroundColor: 'transparent',
-          // width: `calc(100% - ${NAV.W_VERTICAL + 1}px)`,
-          height: HEADER.H_DESKTOP,
-          ...(offsetTop && {
-            height: HEADER.H_DESKTOP_OFFSET,
-          }),
-          ...(isNavHorizontal && {
-            width: 1,
-            height: HEADER.H_DESKTOP_OFFSET,
-            borderBottom: `dashed 1px ${theme.palette.divider}`,
-          }),
-          ...(isNavMini && {
-            width: `calc(100% - ${NAV.W_MINI + 1}px)`,
-          }),
-        }),
-      }}
-    >
-      <Toolbar
+    <>
+      <AppBar
         sx={{
-          height: 1,
-          px: { lg: 5 },
+          height: HEADER.H_MOBILE,
+          zIndex: theme.zIndex.appBar + 1,
+          ...bgBlur({
+            color: '#EDECF5',
+          }),
+          transition: theme.transitions.create(['height'], {
+            duration: theme.transitions.duration.shorter,
+          }),
+          ...(lgUp && {
+            width: `calc(100% - 1px)`,
+            backgroundColor: 'transparent',
+            // width: `calc(100% - ${NAV.W_VERTICAL + 1}px)`,
+            height: HEADER.H_DESKTOP,
+            ...(offsetTop && {
+              height: HEADER.H_DESKTOP_OFFSET,
+            }),
+            ...(isNavHorizontal && {
+              width: 1,
+              height: HEADER.H_DESKTOP_OFFSET,
+              borderBottom: `dashed 1px ${theme.palette.divider}`,
+            }),
+            ...(isNavMini && {
+              width: `calc(100% - ${NAV.W_MINI + 1}px)`,
+            }),
+          }),
         }}
       >
-        {renderContent}
-      </Toolbar>
-    </AppBar>
+        <Toolbar
+          sx={{
+            height: 1,
+            px: { lg: 5 },
+          }}
+        >
+          {renderContent}
+        </Toolbar>
+      </AppBar>
+      <ImageSearchPopup open={open.value} handleClose={open.onFalse} />
+    </>
   );
 }

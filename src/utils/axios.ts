@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 // config
-import { HOST_API, API_SERVICES } from 'src/config-global';
+import { HOST_API } from 'src/config-global';
 
 // ----------------------------------------------------------------------
 
@@ -26,9 +26,7 @@ export const fetcher = async (args: string | [string, AxiosRequestConfig]) => {
 
 // ----------------------------------------------------------------------
 
-export const USER_API = `${API_SERVICES.user.endpoint}${API_SERVICES.user.path}`;
-export const DRIVER_API = `${API_SERVICES.driver.endpoint}${API_SERVICES.driver.path}`;
-export const TRIP_API = `${API_SERVICES.trip.endpoint}${API_SERVICES.trip.path}`;
+export const USER_API = HOST_API;
 
 export const endpoints = {
   chat: '/api/chat',
@@ -55,48 +53,8 @@ export const endpoints = {
     details: '/api/product/details',
     search: '/api/product/search',
   },
-  companies: {
-    search: `${DRIVER_API}companies/search`,
-    details: (id: string) => `${DRIVER_API}companies/${id}`,
-    update: `${DRIVER_API}companies/:id`,
-    updateExportCsvStatus: `${DRIVER_API}companies/export-csv-status`,
-    invite: (id: string) => `${DRIVER_API}companies/${id}/invite`,
-    searchPNR: (pnr: string) => `${DRIVER_API}companies/pnr/${pnr}`,
-    activities: (pnr: string) => `${DRIVER_API}companies/pnr/${pnr}/activities`,
-  },
-  google: {
-    place: {
-      textSearch: 'https://places.googleapis.com/v1/places:searchText',
-    },
-  },
-  user: {
-    list: `${USER_API}users`,
-    details: (id: string) => `${USER_API}users/${id}`,
-    update: (id: string) => `${USER_API}users/${id}`,
-    profile: `${USER_API}users/profile`,
-  },
-  driver: {
-    details: `${DRIVER_API}transporters/company`,
-    update: `${DRIVER_API}transporters/company`,
-    agreements: `${DRIVER_API}transporters/agreements`,
-    uploadDocument: `${DRIVER_API}transporters/upload-document`,
-    addTransaction: `${DRIVER_API}transporters/agreements/sign-now`,
-    getTransaction: (entranceCode: string) =>
-      `${DRIVER_API}transporters/agreements/transaction/${entranceCode}`,
-  },
-  agreement: {
-    list: `${DRIVER_API}agreements`,
-    new: `${DRIVER_API}agreements`,
-    details: (id: string) => `${DRIVER_API}agreements/${id}`,
-    uploadPreSignedAgreement: `${DRIVER_API}agreements/upload-agreement`,
-    getFileUrl: `${DRIVER_API}agreements/file-url`,
-  },
-  cvlDashboard: {
-    list: `${TRIP_API}trips`,
-    searchDrivers: `${DRIVER_API}drivers/search`,
-    getDriverDetail: (id: number) => `${DRIVER_API}drivers/${id}`,
-    getTripStatus: (id: string) => `${DRIVER_API}trips/${id}/status`,
-    updateTrip: (id: string) => `${TRIP_API}trips/${id}`,
-    invite: (id: string) => `${TRIP_API}trips/${id}/invite`,
+  image: {
+    search: `${HOST_API}/search-images`,
+    getImage: (key: string) => `${HOST_API}/get-image/${key}`,
   },
 };

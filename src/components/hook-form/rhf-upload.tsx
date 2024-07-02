@@ -1,3 +1,4 @@
+import { DropEvent, FileRejection } from 'react-dropzone';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import FormHelperText from '@mui/material/FormHelperText';
@@ -53,8 +54,32 @@ export function RHFUploadBox({ name, ...other }: Props) {
 
 // ----------------------------------------------------------------------
 
-export function RHFUpload({ name, multiple, helperText, ...other }: Props) {
-  const { control } = useFormContext();
+export function RHFUpload({ name, multiple, helperText, onDrop, ...other }: Props) {
+  const { control, setValue } = useFormContext();
+
+  const handelOnDrop = (
+    acceptedFiles: File[],
+    fileRejections: FileRejection[],
+    event: DropEvent
+  ) => {
+    if (onDrop) {
+      onDrop(acceptedFiles, fileRejections, event);
+    } else {
+      setValue(
+        name,
+        multiple
+          ? acceptedFiles.map((file) =>
+              Object.assign(file, {
+                preview: URL.createObjectURL(file),
+              })
+            )
+          : Object.assign(acceptedFiles[0], {
+              preview: URL.createObjectURL(acceptedFiles[0]),
+            }),
+        { shouldDirty: true, shouldValidate: true }
+      );
+    }
+  };
 
   return (
     <Controller
@@ -81,6 +106,7 @@ export function RHFUpload({ name, multiple, helperText, ...other }: Props) {
             accept={{ 'image/*': [] }}
             file={field.value}
             error={!!error}
+            onDrop={handelOnDrop}
             helperText={
               (!!error || helperText) && (
                 <FormHelperText error={!!error} sx={{ px: 2 }}>

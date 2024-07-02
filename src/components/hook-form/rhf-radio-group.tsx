@@ -15,6 +15,7 @@ type Props = RadioGroupProps & {
   label?: string;
   spacing?: number;
   helperText?: React.ReactNode;
+  disabled?: boolean;
 };
 
 export default function RHFRadioGroup({
@@ -24,6 +25,7 @@ export default function RHFRadioGroup({
   options,
   spacing,
   helperText,
+  disabled = false,
   ...other
 }: Props) {
   const { control } = useFormContext();
@@ -35,7 +37,7 @@ export default function RHFRadioGroup({
       name={name}
       control={control}
       render={({ field, fieldState: { error } }) => (
-        <FormControl component="fieldset">
+        <FormControl component="fieldset" disabled={disabled}>
           {label && (
             <FormLabel component="legend" id={labelledby} sx={{ typography: 'body2' }}>
               {label}
