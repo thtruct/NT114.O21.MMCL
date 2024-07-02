@@ -1,6 +1,10 @@
 import { Box, ImageList, ImageListItem } from '@mui/material';
 
+import { useSearchImage } from 'src/hooks/use-search-image';
+
 export default function DashboardView() {
+  const { images } = useSearchImage();
+  console.log('images', images);
   const itemData = [
     {
       img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
@@ -54,8 +58,9 @@ export default function DashboardView() {
 
   return (
     <Box>
-        <ImageList variant="masonry" cols={3} gap={8}>
-          {itemData.map((item) => (
+      <ImageList variant="masonry" cols={3} gap={8}>
+        {images.length <= 0 &&
+          itemData.map((item) => (
             <ImageListItem key={item.img} sx={{ borderRadius: 16 }}>
               <img
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -66,7 +71,19 @@ export default function DashboardView() {
               />
             </ImageListItem>
           ))}
-        </ImageList>
-      </Box>
+        {images.length > 0 &&
+          images.map((item, key) => (
+            <ImageListItem key={key} sx={{ borderRadius: 16 }}>
+              <img
+                srcSet={`${item}`}
+                src={`${item}`}
+                alt="Overview image"
+                loading="lazy"
+                style={{ borderRadius: '20px' }}
+              />
+            </ImageListItem>
+          ))}
+      </ImageList>
+    </Box>
   );
 }

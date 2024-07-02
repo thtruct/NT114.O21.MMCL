@@ -10,12 +10,15 @@ import { searchImages } from 'src/api/image';
 
 import FormProvider, { RHFUpload, RHFTextField, RHFRadioGroup } from 'src/components/hook-form';
 
+import { useSearchImage } from '../../hooks/use-search-image';
+
 type Props = {
   open: boolean;
   handleClose: VoidFunction;
 };
 
 export default function ImageSearchPopup({ open, handleClose }: Props) {
+  const { setImages } = useSearchImage();
   const SearchFormSchema = Yup.object().shape({
     dataset: Yup.string().required('Dataset is required'),
     caption: Yup.string().required('Caption is required'),
@@ -45,8 +48,9 @@ export default function ImageSearchPopup({ open, handleClose }: Props) {
       formData.append('caption', data.caption);
       formData.append('file', data.file as File);
       const res = await searchImages(formData);
-      console.log('res', res);
+
       if (res.ok) {
+        setImages(res.names);
         handleClose();
       } else {
         enqueueSnackbar(res.message, { variant: 'error' });
