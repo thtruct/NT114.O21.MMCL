@@ -77,7 +77,7 @@ export default function DashboardView() {
               <img
                 srcSet={`${item}`}
                 src={`${item}`}
-                alt="Overview image"
+                alt={`${item}`}
                 loading="lazy"
                 style={{ borderRadius: '20px' }}
               />
