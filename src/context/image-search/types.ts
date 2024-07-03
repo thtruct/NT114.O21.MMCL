@@ -1,20 +1,24 @@
-export type ContextType = {
-  images: string[];
-  //
+export type ContextType = StateType & {
   setImages: (images: string[]) => void;
+  setDataset: (value: string) => void;
 };
 
 export type StateType = {
-  images: string[];
+  images: { name: string; url: string }[];
+  dataset: string;
 };
 
 export enum ETypes {
   SET_IMAGES = 'SET_IMAGES',
+  SET_DATASET = 'SET_DATASET',
 }
 
 type TPayload = {
   [ETypes.SET_IMAGES]: {
     images: string[];
+  };
+  [ETypes.SET_DATASET]: {
+    dataset: string;
   };
 };
 

@@ -1,19 +1,29 @@
 import { useMemo, useReducer, useCallback } from 'react';
 
-import { endpoints } from '../../utils/axios';
+import { getLink } from 'src/utils/image';
+
 import { ETypes, TActions, StateType } from './types';
 import { ImageSearchContext } from './image-search-context';
 
 //----------------------------------------------------------------------
 const initialState: StateType = {
   images: [],
+  dataset: 'cirr',
 };
 const reducer = (state: StateType, action: TActions) => {
   switch (action.type) {
     case ETypes.SET_IMAGES:
       return {
         ...state,
-        images: action.payload.images.map((image) => endpoints.image.getImage(image)),
+        images: action.payload.images.map((image) => ({
+          name: image,
+          url: getLink(image),
+        })),
+      };
+    case ETypes.SET_DATASET:
+      return {
+        ...state,
+        dataset: action.payload.dataset,
       };
     default:
       return state;
@@ -37,13 +47,23 @@ export function ImageSearchProvider({ children }: Props) {
     });
   }, []);
 
+  const setDataset = useCallback((dataset: string) => {
+    dispatch({
+      type: ETypes.SET_DATASET,
+      payload: {
+        dataset,
+      },
+    });
+  }, []);
+
   const memoizedValue = useMemo(
     () => ({
-      images: state.images,
+      ...state,
       //
       setImages,
+      setDataset,
     }),
-    [state, setImages]
+    [state, setImages, setDataset]
   );
 
   return (

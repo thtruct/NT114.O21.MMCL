@@ -1,89 +1,131 @@
-import { Box, ImageList, ImageListItem } from '@mui/material';
+import { useState } from 'react';
+
+import Autocomplete from '@mui/material/Autocomplete';
+import {
+  Box,
+  Stack,
+  Divider,
+  ImageList,
+  TextField,
+  IconButton,
+  ImageListItem,
+  ImageListItemBar,
+} from '@mui/material';
 
 import { useSearchImage } from 'src/hooks/use-search-image';
 
+import { getLink } from 'src/utils/image';
+
+import { useImageCaption, useImageOverview } from 'src/api/image';
+
+import Iconify from 'src/components/iconify';
+import { LoadingLayer } from 'src/components/loading-screen';
+
 export default function DashboardView() {
-  const { images } = useSearchImage();
-  console.log('images', images);
-  const itemData = [
-    {
-      img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-      title: 'Bed',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-      title: 'Books',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
-      title: 'Sink',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
-      title: 'Kitchen',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
-      title: 'Blinds',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
-      title: 'Chairs',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-      title: 'Laptop',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-      title: 'Doors',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
-      title: 'Coffee',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
-      title: 'Storage',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
-      title: 'Candle',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
-      title: 'Coffee table',
-    },
-  ];
+  const [imageSelected, setImageSelected] = useState<{ name: string; url: string }>();
+  const { images, dataset } = useSearchImage();
+  const { data, isLoading, isValidating } = useImageOverview(dataset, images.length === 0);
+  const { data: captions, isLoading: captionLoading } = useImageCaption(
+    dataset,
+    imageSelected?.name
+  );
+
+  console.log('captions', captions.names);
+
+  const onSelectImage = (item: { name: string; url: string }) => {
+    console.log('item', item);
+    setImageSelected(item);
+  };
 
   return (
     <Box>
-      <ImageList variant="masonry" cols={3} gap={8}>
-        {images.length <= 0 &&
-          itemData.map((item) => (
-            <ImageListItem key={item.img} sx={{ borderRadius: 16 }}>
-              <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-                style={{ borderRadius: '20px' }}
-              />
-            </ImageListItem>
-          ))}
-        {images.length > 0 &&
-          images.map((item, key) => (
-            <ImageListItem key={key} sx={{ borderRadius: 16 }}>
-              <img
-                srcSet={`${item}`}
-                src={`${item}`}
-                alt={`${item}`}
-                loading="lazy"
-                style={{ borderRadius: '20px' }}
-              />
-            </ImageListItem>
-          ))}
-      </ImageList>
+      {imageSelected && (
+        <Stack pb={3} spacing={3}>
+          <img
+            srcSet={`${imageSelected.url}`}
+            src={`${imageSelected.url}`}
+            alt={imageSelected.name}
+            loading="lazy"
+            style={{ borderRadius: '20px', cursor: 'pointer', width: '300px' }}
+          />
+          <Autocomplete
+            fullWidth
+            options={captions.names}
+            getOptionLabel={(option) => option}
+            renderInput={(params) => <TextField {...params} label="Combo box" margin="none" />}
+            renderOption={(props, option) => (
+              <li {...props} key={option}>
+                {option}
+              </li>
+            )}
+            freeSolo
+          />
+          <Divider />
+        </Stack>
+      )}
+      {isLoading || isValidating || captionLoading ? (
+        <LoadingLayer />
+      ) : (
+        <ImageList variant="masonry" cols={3} gap={8}>
+          {images.length <= 0 &&
+            !!data?.names &&
+            data.names
+              .map((path) => ({ name: path, url: getLink(path) }))
+              .map((item, key) => (
+                <ImageListItem key={key} sx={{ borderRadius: 16 }}>
+                  <img
+                    srcSet={`${item.url}`}
+                    src={`${item.url}`}
+                    alt={item.name}
+                    loading="lazy"
+                    style={{ borderRadius: '20px', cursor: 'pointer' }}
+                    onClick={() => onSelectImage(item)}
+                  />
+                  <ImageListItemBar
+                    sx={{
+                      background:
+                        'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+                        'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+                    }}
+                    position="top"
+                    actionIcon={
+                      <IconButton>
+                        <Iconify icon="eva:checkmark-circle-2-fill" width={24} />
+                      </IconButton>
+                    }
+                    actionPosition="left"
+                  />
+                </ImageListItem>
+              ))}
+          {images.length > 0 &&
+            images.map((item, key) => (
+              <ImageListItem key={key} sx={{ borderRadius: 16 }}>
+                <img
+                  srcSet={`${item.url}`}
+                  src={`${item.url}`}
+                  alt={`${item.name}`}
+                  loading="lazy"
+                  style={{ borderRadius: '20px', cursor: 'pointer' }}
+                  onClick={() => onSelectImage(item)}
+                />
+                <ImageListItemBar
+                  sx={{
+                    background:
+                      'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+                      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+                  }}
+                  position="top"
+                  actionIcon={
+                    <IconButton>
+                      <Iconify icon="eva:checkmark-circle-2-fill" width={24} />
+                    </IconButton>
+                  }
+                  actionPosition="left"
+                />
+              </ImageListItem>
+            ))}
+        </ImageList>
+      )}
     </Box>
   );
 }

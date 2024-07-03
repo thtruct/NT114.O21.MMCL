@@ -55,6 +55,10 @@ export const endpoints = {
   },
   image: {
     search: `${HOST_API}/search-images`,
-    getImage: (key: string) => `${HOST_API}/get-image/${key}`,
+    getImage: (key: string) => `${HOST_API}/get_image/${key}`,
+    overview: (dataset: string) => `${HOST_API}/images/${dataset}`,
+    caption: (dataset: string, name: string) => `${HOST_API}/images/${dataset}/${name}`,
+    results: (dataset: string, name: string, caption: string) =>
+      `${HOST_API}/images/${dataset}/${name}/${caption}`,
   },
 };
