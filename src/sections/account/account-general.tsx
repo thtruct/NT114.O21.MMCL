@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
-import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
+import { useMemo, useCallback } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Box from '@mui/material/Box';
@@ -11,19 +11,21 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import { useMockedUser } from 'src/hooks/use-mocked-user';
-
 import { fData } from 'src/utils/format-number';
 
 import { countries } from 'src/assets/data';
+import { useAuthContext } from 'src/auth/hooks';
 
 import { useSnackbar } from 'src/components/snackbar';
 import FormProvider, {
   RHFSwitch,
   RHFTextField,
-  RHFUploadAvatar,
   RHFAutocomplete,
+  RHFUploadAvatar,
 } from 'src/components/hook-form';
+
+import { putItem } from '../../utils/ddb';
+import { AWS_CONFIG } from '../../config-global';
 
 // ----------------------------------------------------------------------
 
@@ -44,36 +46,40 @@ type UserType = {
 export default function AccountGeneral() {
   const { enqueueSnackbar } = useSnackbar();
 
-  const { user } = useMockedUser();
+  const { user } = useAuthContext();
+  console.log('user', user);
 
   const UpdateUserSchema = Yup.object().shape({
     displayName: Yup.string().required('Name is required'),
     email: Yup.string().required('Email is required').email('Email must be a valid email address'),
-    photoURL: Yup.mixed<any>().nullable().required('Avatar is required'),
-    phoneNumber: Yup.string().required('Phone number is required'),
-    country: Yup.string().required('Country is required'),
-    address: Yup.string().required('Address is required'),
-    state: Yup.string().required('State is required'),
-    city: Yup.string().required('City is required'),
-    zipCode: Yup.string().required('Zip code is required'),
-    about: Yup.string().required('About is required'),
+    photoURL: Yup.mixed<any>().nullable(),
+    phoneNumber: Yup.string().nullable(),
+    country: Yup.string().nullable(),
+    address: Yup.string().nullable(),
+    state: Yup.string().nullable(),
+    city: Yup.string().nullable(),
+    zipCode: Yup.string().nullable(),
+    about: Yup.string().nullable(),
     // not required
     isPublic: Yup.boolean(),
   });
 
-  const defaultValues: UserType = {
-    displayName: user?.displayName || '',
-    email: user?.email || '',
-    photoURL: user?.photoURL || null,
-    phoneNumber: user?.phoneNumber || '',
-    country: user?.country || '',
-    address: user?.address || '',
-    state: user?.state || '',
-    city: user?.city || '',
-    zipCode: user?.zipCode || '',
-    about: user?.about || '',
-    isPublic: user?.isPublic || false,
-  };
+  const defaultValues: UserType = useMemo(
+    () => ({
+      displayName: user?.displayName || '',
+      email: user?.email || '',
+      photoURL: user?.photoURL || null,
+      phoneNumber: user?.phoneNumber || '',
+      country: user?.country || '',
+      address: user?.address || '',
+      state: user?.state || '',
+      city: user?.city || '',
+      zipCode: user?.zipCode || '',
+      about: user?.about || '',
+      isPublic: (user?.isPublic || 'false') === 'true',
+    }),
+    [user]
+  );
 
   const methods = useForm({
     resolver: yupResolver(UpdateUserSchema),
@@ -88,7 +94,54 @@ export default function AccountGeneral() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      const dataUpdate: { [x: string]: any } = {
+        displayName: { S: data.displayName },
+      };
+
+      if (data.phoneNumber) {
+        dataUpdate.phoneNumber = { S: data.phoneNumber.toString() };
+      }
+
+      if (data.photoURL) {
+        dataUpdate.photoURL = { S: data.photoURL.toString() };
+      }
+
+      if (data.country) {
+        dataUpdate.country = { S: data.country.toString() };
+      }
+
+      if (data.address) {
+        dataUpdate.address = { S: data.address.toString() };
+      }
+
+      if (data.state) {
+        dataUpdate.state = { S: data.state.toString() };
+      }
+
+      if (data.city) {
+        dataUpdate.city = { S: data.city.toString() };
+      }
+
+      if (data.zipCode) {
+        dataUpdate.zipCode = { S: data.zipCode.toString() };
+      }
+
+      if (data.about) {
+        dataUpdate.about = { S: data.about.toString() };
+      }
+
+      if (data.isPublic) {
+        dataUpdate.isPublic = { S: 'true' };
+      } else {
+        dataUpdate.isPublic = { S: 'false' };
+      }
+
+      await putItem(AWS_CONFIG.userTable, {
+        id: { S: user?.sub.toString() },
+        email: { S: data.email.toString() },
+        ...dataUpdate,
+      });
+
       enqueueSnackbar('Update success!');
       console.info('DATA', data);
     } catch (error) {

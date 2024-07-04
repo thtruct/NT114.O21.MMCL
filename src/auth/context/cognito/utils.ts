@@ -12,8 +12,9 @@ import {
 
 import axios, { endpoints } from 'src/utils/axios';
 
-import { COGNITO_API } from 'src/config-global';
+import { AWS_CONFIG, COGNITO_API } from 'src/config-global';
 
+import { getItem } from '../../../utils/ddb';
 import { paths } from '../../../routes/paths';
 import { ESocialProvider } from '../../types';
 
@@ -38,10 +39,22 @@ export const getCurrentUser = async (): Promise<{ [id: string]: any } | null> =>
         } else if (session === null) {
           resolve(null);
         } else {
-          resolve({
-            accessToken: session?.getAccessToken().getJwtToken(),
-          });
-          // const idToken = session?.getIdToken();
+          const idToken = session?.getIdToken();
+          getItem(AWS_CONFIG.userTable, { id: { S: idToken?.payload.sub.toString() } }, [])
+            .then((res) => {
+              resolve({
+                ...idToken?.payload,
+                accessToken: session?.getAccessToken().getJwtToken(),
+                ...res,
+              });
+            })
+            .catch(() => {
+              resolve({
+                ...idToken?.payload,
+                accessToken: session?.getAccessToken().getJwtToken(),
+              });
+            });
+
           // axios.defaults.headers.common.Authorization = idToken.getJwtToken();
           // getUserProfile
           // axios.get(`${endpoints.auth.me}`).then((res) => {
@@ -78,7 +91,8 @@ export const signInCognito = (email: string, password: string): Promise<{ [id: s
 
     cognitoUser.authenticateUser(authDetails, {
       onSuccess: (session) => {
-        // const idToken = session?.getIdToken();
+        const idToken = session?.getIdToken();
+        console.log('idToken', idToken);
         // axios.defaults.headers.common.Authorization = idToken.getJwtToken();
         // getUserProfile
         // axios.get(endpoints.auth.me).then((res) => {
