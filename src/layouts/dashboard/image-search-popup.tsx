@@ -24,7 +24,7 @@ export default function ImageSearchPopup({ open, handleClose }: Props) {
     dataset: Yup.string().required('Dataset is required'),
     caption: Yup.string().required('Caption is required'),
     file: Yup.mixed().required('File is required'),
-    fiqCategory: Yup.string().required('Category is required'),
+    fiqCategory: Yup.string().nullable(),
   });
 
   const defaultValues = useMemo(
@@ -67,7 +67,7 @@ export default function ImageSearchPopup({ open, handleClose }: Props) {
       formData.append('dataset', data.dataset);
       formData.append('caption', data.caption);
       formData.append('file', data.file as File);
-      if (data.dataset === 'fashionIQ') {
+      if (data.dataset === 'fashionIQ' && data.fiqCategory) {
         formData.append('fiq-category', data.fiqCategory);
       }
       const res = await searchImages(formData);

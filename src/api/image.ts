@@ -45,3 +45,8 @@ export function useImageCaption(dataset?: string, name?: string, shouldFetch: bo
     [data, isLoading, isValidating, error, mutate]
   );
 }
+
+export async function searchImageByCaption(dataset: string, name: string, caption: string) {
+  const res = await axiosInstance.get(endpoints.image.results(dataset, name, caption));
+  return res.data;
+}
