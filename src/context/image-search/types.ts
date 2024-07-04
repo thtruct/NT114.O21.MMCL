@@ -1,10 +1,12 @@
+import { ImageItem } from 'src/types/image';
+
 export type ContextType = StateType & {
   setImages: (images: string[]) => void;
   setDataset: (value: string) => void;
 };
 
 export type StateType = {
-  images: { name: string; url: string }[];
+  images: ImageItem[];
   dataset: string;
 };
 
